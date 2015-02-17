@@ -27,11 +27,6 @@ import com.necla.simba.protocol.ObjectFragment;
 import com.necla.simba.protocol.ObjectHeader;
 import com.necla.simba.client.SimbaSyncRow;
 
-/**
- * @author Younghwan Go
- * @created Jul 22, 2013 4:44:08 PM
- * 
- */
 public class SimbaSyncObject {
 	private final String TAG = "SimbaSyncObject";
 	private Map<Integer, Long> obj_list;

@@ -30,11 +30,6 @@ import android.util.Log;
 /***
  * Utility class that maintains the list of all SimbaTables. Others can query
  * about the table.
- *  
- * @file SimbaTableManager.java
- * @author Younghwan Go
- * @created 6:36:23 PM, Jul 20, 2012
- * @modified 2:19:13 PM, Feb 10, 2015
  */
 public class SimbaTableManager {
 	private static ConcurrentHashMap<String, ConcurrentHashMap<String, SimbaTable>> client_mtbl_map = new ConcurrentHashMap<String, ConcurrentHashMap<String, SimbaTable>>();

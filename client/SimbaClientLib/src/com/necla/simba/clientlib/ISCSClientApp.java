@@ -15,11 +15,6 @@
  *******************************************************************************/
 package com.necla.simba.clientlib;
 
-/**
- * @author Younghwan Go
- * @created Aug 16, 2013 11:16:48 AM
- * 
- */
 public interface ISCSClientApp {
 	public void newData(String table, final int rows, final int numDeletedRows);
 	public void syncConflict(String table, final int rows);

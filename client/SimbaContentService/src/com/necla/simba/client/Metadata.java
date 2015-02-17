@@ -26,12 +26,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 /**
- * 
  * Helper class to maintain metadata info about tables Keeps the metadata info
  * in a table
- * 
- * @author aranya
- * 
  */
 public class Metadata implements Closeable {
 	private static String TAG = "Metadata";

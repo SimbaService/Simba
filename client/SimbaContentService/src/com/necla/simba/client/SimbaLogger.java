@@ -27,11 +27,6 @@ import java.io.PrintWriter;
 
 /***
  * Utility class that logs network statistics to a file.
- * 
- * @file SimbaLogger.java
- * @author Younghwan Go
- * @created 11:37:55 PM, Oct 15, 2012
- * @modified 2:19:13 PM, Feb 10, 2015
  */
 
 

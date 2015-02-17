@@ -26,11 +26,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-/**
- * @author Younghwan Go
- * @created Jul 31, 2013 2:30:33 PM
- * 
- */
 public class SimbaChunkList {
 	private final static String TAG = "SimbaChunkList";
 	static SQLiteDatabase db;

@@ -19,11 +19,6 @@ import android.os.RemoteException;
 
 /***
  * Class that passes CursorWindowAllocationException.
- * 
- * @file SimbaCursorWindowAllocationException.java
- * @author shao@nec-labs.com
- * @created 5:37:19 PM, Sep 28, 2012
- * @modified 5:37:19 PM, Sep 28, 2012
  */
 public class SimbaCursorWindowAllocationException extends RemoteException {
 	private static final long serialVersionUID = -5956731390685355398L;

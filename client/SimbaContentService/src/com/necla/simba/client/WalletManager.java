@@ -30,11 +30,6 @@ import java.util.UUID;
  * Simba server.
  * For user name and password, it can be read from some configuration file or
  * database. Currently they are returned as dummy values.
- * 
- * @file WalletManager.java
- * @author shao@nec-labs.com
- * @created 11:15:17 AM, Aug 6, 2012
- * @modified 11:15:17 AM, Aug 6, 2012
  */
 public class WalletManager {
 	private static String id = null;

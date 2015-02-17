@@ -21,11 +21,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /***
  * Utility class that maintains the client authentication information.
- * 
- * @file AuthenticationManager.java
- * @author shao@nec-labs.com
- * @created 5:21:39 PM, Jul 23, 2012
- * @modified 5:21:39 PM, Jul 23, 2012
  */
 public class AppAuthenticationManager {
 	private static ConcurrentHashMap<String, String> map = new ConcurrentHashMap<String, String>();

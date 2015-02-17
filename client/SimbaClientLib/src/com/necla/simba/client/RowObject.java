@@ -18,11 +18,6 @@ package com.necla.simba.client;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-/**
- * @author Younghwan Go
- * @created Jul 16, 2013 1:59:41 PM
- * 
- */
 public class RowObject implements Parcelable {
 	private String tbl;
 	private String row_id;

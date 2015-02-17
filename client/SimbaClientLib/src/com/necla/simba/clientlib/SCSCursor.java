@@ -20,11 +20,6 @@ import java.util.List;
 
 import android.database.Cursor;
 
-/**
- * @author Younghwan Go
- * @created Sep 4, 2013 1:47:00 PM
- * 
- */
 public class SCSCursor {
 	private Cursor cursor;
 	private List<SCSInputStream> mis;

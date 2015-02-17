@@ -19,9 +19,6 @@ import android.os.Environment;
 
 /**
  * @category Global Preferences in Simba
- * @author nitin
- * 
- *
  */
 
 public class Preferences {

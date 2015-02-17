@@ -42,11 +42,6 @@ import android.util.Log;
 
 /***
  * This class periodically fires the timer to trigger data sync.
- * 
- * @file WriteTimerTask.java
- * @author Younghwan Go
- * @created 6:35:05 PM, Jul 9, 2012
- * @modified 2:19:13 PM, Feb 10, 2015
  */
 public class WriteTimerTask extends TimerTask {
 	private final String TAG = "WriteTimerTask";

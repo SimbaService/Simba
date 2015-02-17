@@ -20,11 +20,6 @@ import java.util.List;
 
 /***
  * Abstract class that stores only user-defined data.
- * 
- * @file DataRow.java
- * @author shao@nec-labs.com
- * @created 5:37:31 PM, Jul 24, 2012
- * @modified 5:37:31 PM, Jul 24, 2012
  */
 public abstract class DataRow implements Serializable {
 	private static final long serialVersionUID = -4403303777759793631L;

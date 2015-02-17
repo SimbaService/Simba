@@ -27,12 +27,6 @@ import android.util.Log;
 import com.necla.simba.protocol.SimbaMessage;
 import com.necla.simba.protocol.SimbaMultiMessage;
 
-/**
- * TODO: Reorganize how these objects access each other.
- * 
- * @author aranya
- * 
- */
 public class SimbaNetworkManager {
 	private static final String TAG = "SimbaNetworkManager";
 

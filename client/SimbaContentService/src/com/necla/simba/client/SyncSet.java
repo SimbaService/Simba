@@ -20,7 +20,6 @@ import java.util.Map;
 
 import android.content.ContentValues;
 
-/* YGO: SyncSet */
 public class SyncSet {
 	private String row_id;
 	private ContentValues cv;

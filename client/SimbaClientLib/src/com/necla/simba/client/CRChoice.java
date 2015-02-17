@@ -21,11 +21,6 @@ import android.os.Parcelable;
 /***
  * User choices for conflict resolution: use mine, use server's, ignore current
  * conflict.
- * 
- * @file CRChoice.java
- * @author shao@nec-labs.com
- * @created 6:46:16 PM, Jul 23, 2012
- * @modified 6:46:16 PM, Jul 23, 2012
  */
 public enum CRChoice implements Parcelable {
 	MINE, SERVER, IGNORE;

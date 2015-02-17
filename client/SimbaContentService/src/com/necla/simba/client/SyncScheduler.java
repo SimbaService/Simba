@@ -39,11 +39,6 @@ import android.util.SparseArray;
 /***
  * This class schedules the sync activity: data marshaling, compression, and
  * network transfer.
- * 
- * @file SyncScheduler.java
- * @author Younghwan Go
- * @created 6:36:44 PM, Jul 9, 2012
- * @modified 2:19:13 PM, Feb 10, 2015
  */
 public class SyncScheduler {
 	private static String TAG = "SyncScheduler";

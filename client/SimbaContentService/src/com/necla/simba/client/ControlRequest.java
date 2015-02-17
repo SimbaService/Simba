@@ -20,11 +20,6 @@ import java.util.List;
 
 /***
  * This class represents the control message request sent by client.
- * 
- * @file ControlRequest.java
- * @author shao@nec-labs.com
- * @created 10:59:03 AM, Aug 7, 2012
- * @modified 10:59:03 AM, Aug 7, 2012
  */
 public class ControlRequest implements Serializable {
 	private static final long serialVersionUID = 7661185695303229860L;

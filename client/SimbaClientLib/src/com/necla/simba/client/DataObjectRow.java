@@ -19,11 +19,6 @@ import java.util.List;
 
 import com.necla.simba.clientlib.SCSInputStream;
 
-/**
- * @author Younghwan Go
- * @created Aug 1, 2013 2:32:13 PM
- * 
- */
 public class DataObjectRow {
 	private String id;
 	private boolean isDeleted;

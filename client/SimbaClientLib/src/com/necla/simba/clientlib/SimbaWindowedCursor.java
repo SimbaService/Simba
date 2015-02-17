@@ -20,11 +20,6 @@ import android.database.CursorWindow;
 
 /***
  * Customized cursor that stores data in CursorWindow.
- * 
- * @file SimbaWindowedCursor.java
- * @author shao@nec-labs.com
- * @created 11:06:19 PM, Sep 25, 2012
- * @modified 11:06:19 PM, Sep 25, 2012
  */
 public class SimbaWindowedCursor extends AbstractWindowedCursor {
 	

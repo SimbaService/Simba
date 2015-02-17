@@ -17,11 +17,6 @@ package com.necla.simba.client;
 
 import com.necla.simba.protocol.DataRow;
 
-/**
- * @author Younghwan Go
- * @created Aug 12, 2013 2:15:51 PM
- * 
- */
 public class SimbaSyncRow {
 	private DataRow row;
 	private int numObj;

@@ -22,11 +22,6 @@ import android.database.Cursor;
 
 import com.necla.simba.clientlib.SCSInputStream;
 
-/**
- * @author Younghwan Go
- * @created Jul 17, 2013 5:41:50 PM
- * 
- */
 public class CursorInputStream {
 	private Cursor cursor;
 	private List<SCSInputStream> mis;

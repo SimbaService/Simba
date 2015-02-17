@@ -28,11 +28,6 @@ import android.util.Log;
 
 /***
  * Utility class that manages the <client, callback> table.
- * 
- * @file ClientCallbackManager.java
- * @author shao@nec-labs.com
- * @created 5:09:37 PM, Jul 23, 2012
- * @modified 5:09:37 PM, Jul 23, 2012
  */
 public class ClientCallbackManager {
 	private static String TAG = "ClientCallbackManager";

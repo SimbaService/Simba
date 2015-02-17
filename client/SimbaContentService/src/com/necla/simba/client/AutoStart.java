@@ -23,11 +23,6 @@ import android.util.Log;
 /***
  * This class listens to some boot-up events and start the Simba service
  * automatically.
- * 
- * @file AutoStart.java
- * @author shao@nec-labs.com
- * @created 6:37:35 PM, Jul 9, 2012
- * @modified 6:37:35 PM, Jul 9, 2012
  */
 public class AutoStart extends BroadcastReceiver {
 

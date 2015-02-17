@@ -31,11 +31,6 @@ import com.necla.simba.client.TableProperties;
 
 /***
  * Interface between user app and Simba client runtime.
- * 
- * @file SCSClientAPI.java
- * @author Younghwan Go
- * @created 6:46:37 PM, Jul 9, 2012
- * @modified 2:19:13 PM, Feb 10, 2015
  */
 public interface SCSClientAPI {
 	public void plug(Context context, ISCSClientApp callback1,

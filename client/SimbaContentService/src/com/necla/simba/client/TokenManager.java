@@ -27,11 +27,6 @@ import android.util.Log;
 
 /***
  * This class stores the token returned by server.
- * 
- * @file TokenManager.java
- * @author Younghwan Go
- * @created 6:27:52 PM, Aug 7, 2012
- * @modified 2:19:13 PM, Feb 10, 2015
  */
 public class TokenManager {
 	private String token = null;

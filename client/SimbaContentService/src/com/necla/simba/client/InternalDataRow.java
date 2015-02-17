@@ -24,11 +24,6 @@ import android.os.Parcelable;
 /***
  * This is the internal data row used between Simba client and Simba adapter,
  * which has one additional column _id.
- * 
- * @file InternalDataRow.java
- * @author Younghwan Go
- * @created 6:01:21 PM, Jul 24, 2012
- * @modified 2:19:13 PM, Feb 10, 2015
  */
 public class InternalDataRow extends DataRow implements Parcelable {
 	private static final long serialVersionUID = 1L;

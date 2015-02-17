@@ -43,11 +43,6 @@ import android.widget.ToggleButton;
 
 /***
  * Driver class to start the service.
- * 
- * @file SimbaActivity.java
- * @author Younghwan Go
- * @created 6:37:55 PM, Jul 9, 2012
- * @modified 2:19:13 PM, Feb 10, 2015
  */
 public class SimbaActivity extends Activity {
 	private static final String TAG = "SimbaActivity";

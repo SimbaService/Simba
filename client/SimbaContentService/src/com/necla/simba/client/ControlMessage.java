@@ -17,11 +17,6 @@ package com.necla.simba.client;
 
 /***
  * Utility class that stores constants.
- * 
- * @file ControlMessage.java
- * @author Younghwan Go
- * @created 6:06:40 PM, Aug 6, 2012
- * @modified 2:19:13 PM, Feb 10, 2015
  */
 public class ControlMessage {
 	// Control message commands: register, unregister, subscribe, unsubscribe

@@ -33,11 +33,6 @@ import org.iq80.leveldb.ReadOptions;
 import android.os.Environment;
 import android.util.Log;
 
-/**
- * @author Younghwan Go
- * @created Jul 8, 2013 4:49:16 PM
- * 
- */
 public class SimbaLevelDB {
 	private final static String TAG = "SimbaLevelDB";
 	DBFactory factory = JniDBFactory.factory;

@@ -21,11 +21,6 @@ import java.util.PriorityQueue;
 
 import com.necla.simba.protocol.ObjectFragment;
 
-/**
- * @author Younghwan Go
- * @created Jul 22, 2013 4:36:11 PM
- * 
- */
 public class SimbaObject {
 	// PriorityQueue<ObjectFragment> fragments;
 	// boolean complete;

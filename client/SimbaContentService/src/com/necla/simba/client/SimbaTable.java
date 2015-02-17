@@ -49,11 +49,6 @@ import com.necla.simba.protocol.TornRowRequest;
 /***
  * This class provides the application table abstraction: any CRUD operations on
  * the table have to go through its API.
- * 
- * @file SimbaTable.java
- * @author Younghwan Go
- * @created 10:36:00 AM, Jul 11, 2012
- * @modified 2:19:13 PM, Feb 10, 2015
  */
 public class SimbaTable {
 	private final String TAG = "SimbaTable";

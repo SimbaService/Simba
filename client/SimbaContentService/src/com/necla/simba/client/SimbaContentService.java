@@ -59,11 +59,6 @@ import com.necla.simba.protocol.UnsubscribeTable;
 
 /***
  * This class is the core of the Simba content service.
- * 
- * @file SimbaContentService.java
- * @author Younghwan Go
- * @created 6:37:06 PM, Jul 9, 2012
- * @modified 2:19:13 PM, Feb 10, 2015
  */
 public class SimbaContentService extends Service {
 	private static final String TAG = "SimbaContentService";

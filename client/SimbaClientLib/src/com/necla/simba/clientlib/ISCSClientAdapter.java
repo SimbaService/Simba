@@ -18,11 +18,6 @@ package com.necla.simba.clientlib;
 /***
  * Interface for signaling the user app when setup with Simba is done. Note:
  * the user app has to implement this for proper callback.
- * 
- * @file ISCSClientAdapter.java
- * @author shao@nec-labs.com
- * @created 6:45:12 PM, Jul 9, 2012
- * @modified 6:45:12 PM, Jul 9, 2012
  */
 public interface ISCSClientAdapter {
 	public void ready();

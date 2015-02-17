@@ -49,11 +49,6 @@ import com.necla.simba.client.TableProperties;
 
 /***
  * Adapter class that implements Simba Client API.
- * 
- * @file SCSClientAdapter.java
- * @author Younghwan Go
- * @created 6:37:19 PM, Jul 9, 2012
- * @modified 2:19:13 PM, Feb 10, 2015
  */
 public class SCSClientAdapter implements SCSClientAPI {
 	private static final String TAG = "SCSClientAdapter";

@@ -22,11 +22,6 @@ import android.util.Log;
 import com.necla.simba.client.SimbaContentServiceAPI;
 import com.necla.simba.client.SharedConstants;
 
-/**
- * @author Younghwan Go
- * @created Jul 16, 2013 10:07:54 AM
- * 
- */
 public class SCSOutputStream {
 	private final String TAG = "SCSOutputStream";
 	// binder limits max message size to be 1MB

@@ -54,11 +54,6 @@ import com.necla.simba.protocol.SimbaMultiMessage;
 
 /***
  * This class manages both send and receive of Simba sync traffic.
- * 
- * @file NetworkIOHandler.java
- * @author Younghwan Go
- * @created 5:19:51 PM, Jul 30, 2012
- * @modified 2:19:13 PM, Feb 10, 2015
  */
 public class NetworkIOHandler implements Runnable {
 	private final String TAG = "NetworkIOHandler";

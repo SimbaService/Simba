@@ -21,13 +21,6 @@ import java.util.BitSet;
 import com.necla.simba.protocol.SyncHeader;
 import com.necla.simba.protocol.SyncResponse;
 
-/**
- * 
- * Random crap of shared static functions
- * 
- * @author aranya
- * 
- */
 public class Utils {
 
 	// simpler, less verbose methods for logging some stuff

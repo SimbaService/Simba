@@ -20,11 +20,6 @@ import android.util.Log;
 
 import com.necla.simba.client.SimbaContentServiceAPI;
 
-/**
- * @author Younghwan Go
- * @created Jul 17, 2013 2:21:04 PM
- * 
- */
 public class SCSInputStream {
 	private final static int BINDERSIZE = 128 * 1024;
 

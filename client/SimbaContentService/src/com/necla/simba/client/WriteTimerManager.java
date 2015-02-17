@@ -26,11 +26,6 @@ import java.util.Timer;
 /***
  * This class manages the list of timers associated with those tables that
  * require periodic sync.
- * 
- * @file WriteTimerManager.java
- * @author shao@nec-labs.com
- * @created 6:29:09 PM, Jul 9, 2012
- * @modified 6:29:09 PM, Jul 9, 2012
  */
 public class WriteTimerManager {
 	
