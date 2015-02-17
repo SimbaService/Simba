@@ -63,11 +63,6 @@ import com.necla.simba.clientlib.SCSOutputStream;
 
 /***
  * Simple SimbaNoteApp for testing
- * 
- * @file Main.java
- * @author Younghwan Go
- * @created 6:46:37 PM, Oct 5, 2012
- * @modified 2:07:32 PM, Feb 10, 2015
  */
 public class Main extends Activity {
 

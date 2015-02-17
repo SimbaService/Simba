@@ -17,11 +17,6 @@ package com.necla.simba.apps.notes;
 
 import android.graphics.Bitmap;
 
-/**
- * @author Younghwan Go
- * @created Sep 3, 2013 12:49:36 PM
- * 
- */
 public class StringBitmap {
 	private String column;
 	private Bitmap object;
