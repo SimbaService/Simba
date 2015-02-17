@@ -1,0 +1,142 @@
+package com.necla.simba.protocol;
+
+option java_package = "com.necla.simba.protocol";
+
+message SimbaConsistency {
+        enum Type {
+                STRONG = 1;
+                MONOTONIC = 2;
+                CAUSAL = 3;
+                EVENTUAL = 4;
+        }
+        required Type type = 1;
+}
+
+message ColumnData {
+	required string column = 1;
+	optional string value = 2;
+}
+
+message ObjectHeader {
+	required string column = 1;
+	required int32 oid = 2;
+	optional int32 num_chunks = 3; //number of chunks in this object
+}
+
+message ObjectFragment {
+	required int32 trans_id = 1; //all object fragments carry the same trans_id
+	required int32 oid = 2; //transaction-local object id (e.g., 0, 1, 2 ...)
+	required int32 offset = 3; //fragment offset within object
+	required bytes data = 4;
+	optional bool eof = 5; //end of object marker
+}
+
+message DataRow {
+	required string id = 1;
+	optional int32 rev = 2; //
+	repeated ColumnData data = 3;
+	repeated ObjectHeader obj = 4;
+}
+
+message SyncHeader {
+	required string app = 1;
+	required string tbl = 2; //simba table id
+	repeated DataRow dirtyRows = 3;
+	repeated DataRow deletedRows = 4;
+	required int32 trans_id = 5;
+}
+
+message SyncRequest {
+	required SyncHeader data = 1;
+}
+
+message SyncResponse {
+	enum SyncResult {
+		OK = 1;
+		TABLE_NOT_FOUND = 2;
+	}
+
+	required string app = 1;
+	required string tbl = 2;
+	required SyncResult result = 3;
+	required int32 trans_id = 4;
+	repeated DataRow syncedRows = 5;
+	repeated DataRow conflictedRows = 6;
+}
+
+message NotificationPull {
+	required string app = 1;
+	required string tbl = 2;
+	required int32 fromVersion = 3;
+	optional int32 toVersion = 4;
+}
+
+message PullData {
+	required SyncHeader data = 1;
+}
+
+message TornRowRequest {
+	required string app = 1;
+	required string tbl = 2;
+	repeated string id = 3;
+}
+
+message TornRowResponse {
+	required SyncHeader data = 1;
+}
+
+message Column {
+
+	enum Type {
+		INT = 1;
+		VARCHAR = 2;
+		UUID = 3;
+		OBJECT = 4;
+		BOOLEAN = 5;
+		BIGINT = 6;
+		BLOB = 7;
+		COUNTER = 8;
+		DOUBLE = 9;
+		FLOAT = 10;
+		INET = 11;
+		TIMESTAMP = 12;
+		VARINT = 13;
+	}
+		
+	required string name = 1;
+	required Type type = 2; //column data type
+}
+
+message CreateTable {
+	required string app = 1; //cassandra keyspace name
+	required string tbl = 2; //cassandra table name
+	repeated Column columns = 3;
+	required SimbaConsistency consistencyLevel = 4;
+}
+
+message DropTable {
+	required string app = 1;
+	required string tbl = 2;
+}
+
+message AbortTransaction {
+	optional int32 trans_id = 1;
+}
+
+message SubscribeTable {
+	required string app = 1;
+	required string tbl = 2;
+	optional int32 period = 3; //only client must specify
+	optional int32 delayTolerance = 4; //only client must specify
+	optional int32 rev = 5; //only client must specify
+}
+
+message SubscribeResponse {
+	repeated Column columns = 1;
+	optional int32 version = 2;
+}
+
+message UnsubscribeTable {
+	required string app = 1;
+	required string tbl = 2;
+}

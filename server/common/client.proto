@@ -1,0 +1,112 @@
+package com.necla.simba.protocol;
+option java_package = "com.necla.simba.protocol";
+import "common.proto";
+
+//message SyncData {
+//	required string app = 1;
+//	required string tbl = 2;
+//	optional string schemaSql = 3;
+//	repeated DataRow dirtyRows = 4;
+//	repeated Row deletedRows = 5;
+//}
+
+message ActivePullResponse {
+	required SyncHeader data = 1;
+}
+
+message RegisterDevice {
+	required string deviceId = 1;
+	required string userId = 2;
+	required string password = 3;
+}
+
+message Reconnect {
+	// fix this when the token stuff is fixed
+	required int32 dummy = 1;
+}
+
+message Notify {
+	required int32 period = 1;
+}
+
+message BitmapNotify {
+	required bytes bitmap = 1;
+	optional int32 generation = 2;
+}
+
+message PassivePull {
+	required int32 period = 1;
+}
+
+message ActivePull {
+	required string app = 1;
+	required string tbl = 2;
+}
+
+message ControlResponse {
+	required bool status = 1;
+	required string msg = 2;
+}
+
+message ClientMessage {
+
+	enum Type { 
+		SYNC_REQUEST = 1; 
+		SYNC_RESPONSE = 2;
+		CONTROL_RESPONSE = 3;
+		REG_DEV = 4;
+		UNREG_DEV = 5;
+		SUB_TBL = 6;
+		UNSUB_TBL = 7;
+		RECONN = 8;
+		NOTIFY_ACK = 9;
+		PULL_DATA = 10;
+		NOTIFY = 11;
+		PASSIVE_PULL = 12;
+		ACTIVE_PULL = 13;
+		ACTIVE_PULL_RESPONSE = 14;
+		BITMAP_NOTIFY = 15;
+		CREATE_TABLE = 16;
+		DROP_TABLE = 17;
+		OBJECT_FRAGMENT = 18;
+		NOTIFICATION_PULL = 19;
+		TORN_REQUEST = 20;
+		TORN_RESPONSE = 21;
+		SUB_RESPONSE = 22;
+	}
+
+	required Type type = 1;
+	required int32 seq = 2;
+	// TODO: fix this later, the token is required
+    // for certain kinds of message, i.e. most of the requests
+    // we need to split between the tokened messages and non-tokened messages
+	optional string token = 3;
+	optional ActivePullResponse activePullResponse = 4;
+	optional SyncResponse syncResponse = 5;
+
+	optional ControlResponse controlResponse = 6;
+
+	optional RegisterDevice   registerDevice = 7;
+	optional SubscribeTable   subscribeTable = 8;
+	optional UnsubscribeTable unsubscribeTable = 9;
+	optional Reconnect        reconnect = 10;
+	optional PullData         pullData = 11;
+	optional Notify           notify = 12;
+	optional PassivePull      passivePull = 13;
+	optional ActivePull       activePull = 14;
+	optional SyncRequest      syncRequest = 15;
+	optional BitmapNotify	  bitmapNotify = 16;
+	optional CreateTable	  createTable = 17;
+	optional DropTable		  dropTable = 18;
+	optional ObjectFragment	  objectFragment = 19;
+	optional NotificationPull notificationPull = 20;
+	optional TornRowRequest	  tornRowRequest = 21;
+	optional TornRowResponse  tornRowResponse = 22;
+	optional SubscribeResponse subscribeResponse = 23;
+}
+
+// Just a simple way to deal with coalescing of multiple Simba
+// messages.  We might need something more efficient later.
+message ClientMultiMessage {
+	repeated ClientMessage messages = 1;
+}

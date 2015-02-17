@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Main!</string>
+    <string name="app_name">SimbaClientLib</string>
+    <string name="query">Run Query</string>
+
+</resources>

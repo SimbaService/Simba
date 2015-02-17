@@ -1,0 +1,58 @@
+
+<project>
+<!--
+<target name="-pre-clean">
+	<delete dir="src/com/necla/simba/protocol"/>
+</target>
+-->
+
+<target name="build-leveldb">
+	<fail
+		message="ndk.dir is missing. Make sure you update local.properties to set it"
+		unless="ndk.dir"
+	/>
+	<exec executable="${ndk.dir}/ndk-build">
+		<arg value="-C"/>
+		<arg value="${leveldb.dir}"/>
+	</exec>
+	<mkdir dir="libs/armeabi-v7a"/>
+	<copy file="${leveldb.dir}/libs/armeabi-v7a/libleveldb.so" todir="libs/armeabi-v7a"/>
+</target>
+
+<target name="build-leveldbjni">
+	<exec executable="./createjar.sh" dir="${leveldbjni.dir}"/>
+	<copy file="${leveldbjni.dir}/leveldb.jar" todir="libs"/>
+</target>
+
+<target name="prep-leveldb" depends="build-leveldb,build-leveldbjni">
+</target>
+
+<target name="-pre-clean">
+	<delete dir="libs/armeabi-v7a"/>
+	<delete file="libs/leveldb.jar"/>
+</target>
+
+<target name="-pre-build">
+	<fail message="leveldb components not found, perhaps you need to run 'ant prep-leveldb'">
+		<condition>
+			<not>
+				<and>
+					<available file="libs/armeabi-v7a/libleveldb.so"/>
+					<available file="libs/leveldb.jar"/>
+				</and>
+			</not>
+		</condition>
+	</fail>
+
+	<mkdir dir="gen"/>
+	<java jar="../shared/genlib/proto2javame-1.1.2.jar" failonerror="true" fork="yes">
+		<arg value="--java_out=gen"/>
+		<arg value="../shared/common.proto"/>
+	</java>
+	<java jar="../shared/genlib/proto2javame-1.1.2.jar" failonerror="true" fork="yes">
+		<arg value="--java_out=gen"/>
+		<arg value="../shared/client.proto"/>
+	</java>
+</target>
+
+</project>
