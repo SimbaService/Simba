@@ -42,10 +42,6 @@ import com.necla.simba.protocol.Client.ClientMessage;
 import com.necla.simba.util.ConsistentHash;
 import com.necla.simba.util.Utils;
 
-/**
- * @author Dorian Perkins <dperkins@nec-labs.com>
- * @created Jul 23, 2013 11:18:40 AM
- */
 public class ReaderThread implements Runnable {
 
 	private static final int MINUTE = 60 * 1000;

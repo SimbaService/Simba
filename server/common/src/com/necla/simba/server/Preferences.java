@@ -15,10 +15,6 @@
  *******************************************************************************/
 package com.necla.simba.server;
 
-/**
- * @author Dorian Perkins <dperkins@nec-labs.com>
- * @created Aug 14, 2013 3:35:51 PM
- */
 public class Preferences {
 	 public static final int MAX_FRAGMENT_SIZE = 64 * 1024;
 }

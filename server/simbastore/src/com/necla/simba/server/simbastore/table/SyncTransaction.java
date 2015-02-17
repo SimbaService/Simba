@@ -41,10 +41,6 @@ import com.necla.simba.server.simbastore.table.SyncTransaction;
 import com.necla.simba.server.simbastore.server.SimbaStoreServer;
 import com.necla.simba.server.simbastore.swift.SwiftHandler;
 
-/**
- * @author Dorian Perkins <dperkins@nec-labs.com>
- * @created Jul 9, 2013 11:10:51 AM
- */
 public class SyncTransaction {
 	private static final Logger LOG = LoggerFactory
 			.getLogger(SyncTransaction.class);

@@ -15,13 +15,6 @@
  *******************************************************************************/
 package com.necla.simba.client;
 
-/**
- * @category Global Preferences in Simba
- * @author nitin
- * 
- *
- */
-
 public class Preferences {
 
 	public static int COMPRESS_HEURISTIC_SIZE = 0;

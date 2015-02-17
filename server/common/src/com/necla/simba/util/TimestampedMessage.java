@@ -20,10 +20,6 @@ package com.necla.simba.util;
 
 import java.nio.ByteBuffer;
 
-/**
- * @author Dorian Perkins <dperkins@nec-labs.com>
- * @created Sep 24, 2013 5:17:54 PM
- */
 public class TimestampedMessage {
 	public ByteBuffer data;
 	public long ts;

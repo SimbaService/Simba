@@ -19,11 +19,6 @@ import java.io.Serializable;
 
 /***
  * Utility class to provide the pair data abstraction.
- * 
- * @file Pair.java
- * @author shao@nec-labs.com
- * @created 6:36:44 PM, Jul 9, 2012
- * @modified 6:36:44 PM, Jul 9, 2012
  */
 public class Pair<A, B> implements Serializable {
 	private static final long serialVersionUID = -5882474332890446940L;

@@ -40,10 +40,6 @@ import com.necla.simba.server.simbastore.swift.SwiftHandler;
 import com.necla.simba.server.simbastore.util.Utils;
 import com.necla.simba.util.Pair;
 
-/**
- * @author Dorian Perkins <dperkins@nec-labs.com>
- * @created Aug 11, 2013 5:33:08 PM
- */
 public class SyncRow {
 	private static final Logger LOG = LoggerFactory.getLogger(SyncRow.class);
 

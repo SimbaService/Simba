@@ -40,13 +40,6 @@ import com.necla.simba.server.simbastore.util.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * 
- * Random crap of shared static functions
- * 
- * @author aranya
- * 
- */
 public class Utils {
 
     private static final Logger LOG = LoggerFactory.getLogger(Utils.class);

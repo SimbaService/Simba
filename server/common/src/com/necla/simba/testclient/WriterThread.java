@@ -47,10 +47,6 @@ import com.necla.simba.server.Preferences;
 import com.necla.simba.util.ConsistentHash;
 import com.necla.simba.util.Utils;
 
-/**
- * @author Dorian Perkins <dperkins@nec-labs.com>
- * @created Jul 22, 2013 3:07:07 PM
- */
 public class WriterThread implements Runnable {
 
 	private static final int MINUTE = 60 * 1000;

@@ -22,9 +22,6 @@ import java.util.PriorityQueue;
 import com.necla.simba.protocol.Common.ObjectFragment;
 
 /**
- * @author Dorian Perkins <dperkins@nec-labs.com>
- * @created Jul 9, 2013 10:38:43 AM
- * 
  * The SimbaObject will store object fragments of an object and concatenate them together on-demand into a byte array.
  * It uses a priority queue to sort object fragments in ascending order by their offset value.
  */

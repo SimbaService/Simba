@@ -38,11 +38,6 @@ import com.necla.simba.server.simbastore.cache.ObjectChanges;
 import com.necla.simba.server.simbastore.cache.OperationCache;
 import com.necla.simba.server.simbastore.cache.OperationCache.CircularQueue;
 
-/**
- * @author dperkins@nec-labs.com
- * @created May 31, 2013 10:36:58 AM
- */
-
 public class OperationCache {
 	private static final Logger LOG = LoggerFactory
 			.getLogger(OperationCache.class);

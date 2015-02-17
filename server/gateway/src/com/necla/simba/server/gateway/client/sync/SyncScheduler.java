@@ -33,12 +33,6 @@ import com.necla.simba.server.gateway.client.ClientState;
 /***
  * This class schedules the sync activity: data marshaling, compression, and
  * network transfer. This copy is based on client version of SyncScheduler.
- * 
- * @file SyncScheduler.java
- * @author shao@nec-labs.com
- * @author dperkins@nec-labs.com
- * @created 11:36:44 AM, Oct 1, 2012
- * @modified 6:04:22 PM, Jun 21, 2013
  */
 public class SyncScheduler {
     private static final Logger LOG = LoggerFactory.getLogger(SyncScheduler.class.getName());

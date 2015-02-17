@@ -17,12 +17,6 @@ package com.necla.simba.server.gateway.client.auth;
 
 import com.necla.simba.client.SimbaException;
 
-/***
- * @file DeviceNotRegisteredException.java
- * @author shao@nec-labs.com
- * @created 3:27:10 PM, Aug 7, 2012
- * @modified 3:27:10 PM, Aug 7, 2012
- */
 public class DeviceNotRegisteredException extends SimbaException {
 	private static final long serialVersionUID = 471145507237707189L;
 

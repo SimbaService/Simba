@@ -41,11 +41,6 @@ import com.necla.simba.server.gateway.subscription.SubscriptionManager;
 /***
  * This class performs client authentication, the store and lookup of client
  * socket channel, which is used to send notification from server.
- * 
- * @file TokenManager.java
- * @author shao@nec-labs.com
- * @created 1:49:25 PM, Aug 7, 2012
- * @modified 1:49:25 PM, Aug 7, 2012
  */
 public class ClientAuthenticationManager {
 	private static final Logger LOG = LoggerFactory

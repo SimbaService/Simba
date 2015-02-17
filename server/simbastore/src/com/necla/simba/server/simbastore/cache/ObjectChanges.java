@@ -23,10 +23,6 @@ import java.util.UUID;
 
 import com.necla.simba.server.simbastore.cache.ObjectChanges;
 
-/**
- * @author Dorian Perkins <dperkins@nec-labs.com>
- * @created Aug 18, 2013 5:13:09 PM
- */
 public class ObjectChanges {
 	public Map<Integer, UUID> chunks;
 	public String name;

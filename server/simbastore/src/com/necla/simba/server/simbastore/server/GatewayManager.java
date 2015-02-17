@@ -39,11 +39,6 @@ import com.necla.simba.protocol.Server.SimbaMessage;
 import com.necla.simba.server.SeqNumManager;
 import com.necla.simba.server.simbastore.server.data.ServerDataEvent;
 
-/**
- * @author Dorian Perkins <dperkins@nec-labs.com>
- * @created Aug 27, 2013 3:32:21 PM
- */
-
 public class GatewayManager {
 
 	private static final Logger LOG = LoggerFactory

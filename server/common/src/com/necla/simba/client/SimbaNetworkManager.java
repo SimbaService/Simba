@@ -32,11 +32,6 @@ import com.necla.simba.protocol.Client.ClientMessage;
 import com.necla.simba.protocol.Client.ClientMultiMessage;
 import com.necla.simba.protocol.Client.RegisterDevice;
 
-/**
- * TODO: Reorganize how these objects access each other.
- * @author aranya
- *
- */
 public class SimbaNetworkManager implements ControlListener {
 	private static final Logger LOG = LoggerFactory.getLogger(SimbaNetworkManager.class);
 	SeqNumManager sequencer = new SeqNumManager();

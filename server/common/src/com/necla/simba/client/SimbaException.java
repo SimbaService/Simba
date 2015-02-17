@@ -15,12 +15,6 @@
  *******************************************************************************/
 package com.necla.simba.client;
 
-/***
- * @file AuthFailureException.java
- * @author shao@nec-labs.com
- * @created 2:59:58 PM, Aug 7, 2012
- * @modified 2:59:58 PM, Aug 7, 2012
- */
 public abstract class SimbaException extends Exception {
 	private static final long serialVersionUID = 1L;
 	private String err;

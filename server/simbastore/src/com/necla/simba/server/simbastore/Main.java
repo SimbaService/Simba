@@ -44,11 +44,6 @@ import com.necla.simba.server.simbastore.table.SimbaTable;
 import com.necla.simba.server.simbastore.table.SyncTransaction;
 import com.necla.simba.util.ConsistentHash;
 
-/**
- * @author dperkins@nec-labs.com
- * @created May 30, 2013 1:19:31 PM
- */
-
 public class Main {
 	private static final Logger LOG = LoggerFactory.getLogger(Main.class);
 	private Properties properties;

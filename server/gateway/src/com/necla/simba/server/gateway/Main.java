@@ -45,16 +45,7 @@ import com.necla.simba.server.gateway.stats.StatsDumper;
 import com.necla.simba.server.gateway.subscription.SubscriptionManager;
 import com.necla.simba.util.StatsCollector;
 
-/**
- * @author dperkins@nec-labs.com
- * @created May 30, 2013 1:27:03 PM
- */
-
 public class Main {
-
-	/**
-	 * @param args
-	 */
 	private static final Logger LOG = LoggerFactory.getLogger(Main.class);
 	public static Properties properties;
 

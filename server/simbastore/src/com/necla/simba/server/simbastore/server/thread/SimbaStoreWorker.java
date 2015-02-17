@@ -86,11 +86,6 @@ import com.necla.simba.server.simbastore.table.SyncTransaction;
 import com.necla.simba.server.simbastore.util.Utils;
 import com.necla.simba.util.StatsCollector;
 
-/**
- * @author dperkins@nec-labs.com
- * @created May 30, 2013 1:19:31 PM
- */
-
 public class SimbaStoreWorker implements Runnable {
 	private static final Logger LOG = LoggerFactory
 			.getLogger(SimbaStoreWorker.class);

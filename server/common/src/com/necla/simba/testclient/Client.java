@@ -31,10 +31,6 @@ import com.necla.simba.util.ConsistentHash;
 
 public class Client {
 
-	/**
-	 * @param args
-	 */
-
 	static final String AB = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
 	static Random rnd = new Random();
 	static SeqNumManager sequencer = new SeqNumManager();

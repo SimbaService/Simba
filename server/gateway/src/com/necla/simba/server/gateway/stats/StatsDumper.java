@@ -21,8 +21,6 @@ import org.slf4j.LoggerFactory;
 import com.necla.simba.server.gateway.stats.StatsDumper;
 import com.necla.simba.server.netio.Stats;
 
-
-
 public class StatsDumper extends Thread {
 	  private static final Logger LOG = LoggerFactory.getLogger(StatsDumper.class);
 

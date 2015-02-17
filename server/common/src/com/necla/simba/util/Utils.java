@@ -25,13 +25,6 @@ import java.util.UUID;
 import com.necla.simba.protocol.Common.SyncHeader;
 import com.necla.simba.protocol.Common.SyncResponse;
 
-/**
- * 
- * Random crap of shared static functions
- * 
- * @author aranya
- * 
- */
 public class Utils {
 	// simpler, less verbose methods for logging some stuff
 	public static String stringify(SyncHeader sd) {

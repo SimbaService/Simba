@@ -24,11 +24,6 @@ import com.necla.simba.protocol.Client.ClientMessage;
  * Utility class that manages the sequence number and performs simple protocol
  * check. e.g. the return message will carry the sequence number of previous
  * control message.
- * 
- * @file SeqNumManager.java
- * @author shao@nec-labs.com
- * @created 5:25:03 PM, Aug 6, 2012
- * @modified 5:25:03 PM, Aug 6, 2012
  */
 public class SeqNumManager {
 	private int cnt = (int) (Math.random() * Integer.MAX_VALUE);

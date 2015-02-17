@@ -56,11 +56,6 @@ import com.necla.simba.server.netio.Stats;
 
 /***
  * This class manages both send and receive of Simba sync traffic.
- * 
- * @file NetworkIOHandler.java
- * @author shao@nec-labs.com
- * @created 5:19:51 PM, Jul 30, 2012
- * @modified 5:19:51 PM, Jul 30, 2012
  */
 public class NetworkIOHandler implements Runnable {
 	private static final Logger LOG = LoggerFactory

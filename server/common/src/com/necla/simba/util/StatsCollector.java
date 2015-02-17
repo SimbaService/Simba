@@ -30,11 +30,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * 
  * Records the entry/exit times for a message.
- * 
- * @author Dorian Perkins <dperkins@nec-labs.com>
- * @created Jul 26, 2013 2:32:04 PM
  */
 public class StatsCollector {
 	private PrintWriter pw;

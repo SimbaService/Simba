@@ -39,11 +39,6 @@ import com.necla.simba.server.gateway.client.auth.InvalidTokenException;
 import com.necla.simba.server.gateway.server.backend.BackendConnector;
 import com.necla.simba.server.gateway.subscription.SubscriptionManager;
 
-/**
- * @author dperkins@nec-labs.com
- * @created May 30, 2013 12:27:28 PM
- */
-
 public class SubscriptionManager {
 
 	private ConcurrentHashMap<String, List<Column>> tableSchemas;

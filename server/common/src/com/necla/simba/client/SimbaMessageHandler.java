@@ -36,33 +36,6 @@ import com.necla.simba.protocol.Client.ClientMessage;
 import com.necla.simba.protocol.Client.ClientMultiMessage;
 import com.necla.simba.util.Utils;
 
-/***
- * This class handles sync messages from server. It can be sync response, sync
- * notification, and sync data.
- * ------------------------
- * 1. Sync Response
- * ------------------------
- * For ok rows (rows being synced successfully ), update local revision number
- * or delete from delete_list. For conflict rows, notify user app about the
- * conflict first, then store server's copy in table for Conflict Resolution at
- * user's convenience.
- * ------------------------
- * 2. Sync Notification
- * ------------------------
- * Initiate simulated pull for tables with fired period (specified in the
- * notification message).
- * ------------------------
- * 3. Sync Data
- * ------------------------
- * For dirty rows (rows being updated by other clients), insert into local table
- * or add to conflict list. For deleted rows, add to conflict list or do nothing
- * if not found locally.
- * 
- * @file SyncMessageHandler.java
- * @author shao@nec-labs.com
- * @created 6:26:23 PM, Jul 20, 2012
- * @modified 6:26:23 PM, Jul 20, 2012
- */
 public class SimbaMessageHandler implements Runnable {
 	private static final Logger LOG = LoggerFactory.getLogger(SimbaMessageHandler.class);
 	private List<ClientMessage> queue;

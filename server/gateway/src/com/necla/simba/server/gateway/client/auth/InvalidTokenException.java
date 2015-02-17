@@ -17,12 +17,6 @@ package com.necla.simba.server.gateway.client.auth;
 
 import com.necla.simba.client.SimbaException;
 
-/***
- * @file InvalidTokenException.java
- * @author shao@nec-labs.com
- * @created 3:27:28 PM, Aug 7, 2012
- * @modified 3:27:28 PM, Aug 7, 2012
- */
 public class InvalidTokenException extends SimbaException {
 	private static final long serialVersionUID = 4807318951310207107L;
 

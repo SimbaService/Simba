@@ -29,11 +29,6 @@ import com.necla.simba.protocol.Server.SimbaMessage;
 import com.necla.simba.server.simbastore.server.SimbaStoreServer;
 import com.necla.simba.server.simbastore.server.SubscriptionManager;
 
-/**
- * @author dperkins@nec-labs.com
- * @created May 30, 2013 12:27:28 PM
- */
-
 public class SubscriptionManager {
 	private Multimap<String, SocketChannel> subscriptions;
 	private static final Logger LOG = LoggerFactory

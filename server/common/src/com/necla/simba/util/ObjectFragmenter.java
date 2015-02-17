@@ -24,10 +24,6 @@ import com.google.protobuf.ByteString;
 import com.necla.simba.protocol.Common.ObjectFragment;
 import com.necla.simba.server.Preferences;
 
-/**
- * @author Dorian Perkins <dperkins@nec-labs.com>
- * @created Jul 11, 2013 9:50:14 AM
- */
 public class ObjectFragmenter {
 
 	public static LinkedList<ObjectFragment> fragment(int obj_id, int trans_id, byte[] object){
