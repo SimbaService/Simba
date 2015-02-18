@@ -16,7 +16,7 @@ You must set certain configuration options in the following files:
 
 In `client.properties`, set:  
   * `gateways`: Comma-separated list of gateway nodes.  
-  * `consistency`: Consistency level used by test client (Default: `CAUSAL`).  
+  * `consistency`: Consistency level used by test client (Default: `CAUSAL`). _optional_.  
 
 In `gateway.properties`, set:  
   * `simbastores`: Comma-separated list of store nodes.  
