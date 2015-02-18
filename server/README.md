@@ -1,10 +1,43 @@
 Simba Server
 ============
 
-To compile
-----------
-Run ./compile.sh.  
-JARs with dependencies will build in ./{common,gateway,simbastore}/target/ folders.  
+Prerequisites
+-------------
+Before running the Simba Server you must have operational deployments of Apache Cassandra and OpenStack Swift.  
+
+Configuration
+-------------
+You must set certain configuration options in the following files:  
+```
+./common/src/resources/client.properties  
+./gateway/src/resources/gateway.properties  
+./simbastore/src/resources/simbastore.properties  
+```
+
+In `client.properties`, set:  
+  * `gateways`: Comma-separated list of gateway nodes.  
+  * `consistency`: Consistency level used by test client (Default: `CAUSAL`).  
+
+In `gateway.properties`, set:  
+  * `simbastores`: Comma-separated list of store nodes.  
+  * `backend.server.thread.count`: Number of Gateway backend server threads. Set equal to number of store nodes.   
+
+In `simbastore.properties`, set:  
+  * `simbastores`: Comma-separated list of store nodes.  
+  * `cassandra.keyspace`: Keyspace name for Simba metadata. Must also create it in Cassandra (Default: `simbastore`).  
+  * `cassandra.seed`: Set Cassandra seed node host or IP.  
+  * `swift.container`: Container name for Simba objects. Must also create it in Swift (Default:  `simbastore`).  
+  * `swift.identity`: Swift account name.   
+  * `swift.password`: Pass key for Swift account.  
+  * `swift.proxy.url`: Swift proxy URL.  
+
+Compilation
+-----------
+To compile, run:  
+```
+./compile.sh  
+```
+JARs with dependencies will be built in folders ./{common,gateway,simbastore}/target/.
 
 Starting Simba Store
 --------------------
