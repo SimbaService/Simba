@@ -1,9 +1,9 @@
-Simba Server
-============
+Simba Cloud
+===========
 
 Prerequisites
 -------------
-Before running the Simba Server you must have operational deployments of Apache Cassandra and OpenStack Swift.  
+Before running the Simba Cloud you must have operational deployments of Apache Cassandra and OpenStack Swift.  
 
 Configuration
 -------------
