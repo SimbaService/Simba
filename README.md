@@ -30,4 +30,4 @@ Server
 
 More Information
 ----------------
-Please see our papers on Simba for more information.
+Please see our papers on Simba ([FAST 2015][https://www.usenix.org/conference/fast15/technical-sessions/presentation/go], Eurosys 2015) for more information. If you have questions, please join the discussion at our [Google Group][https://groups.google.com/forum/#!forum/simbasync].
