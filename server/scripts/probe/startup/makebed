@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source ../config.sh
+
+/share/probe/bin/probe-makebed -e ${exp} -p ${proj} -i ${image} -n ${num_nodes}
+# startexp -i -p ${proj} -e ${exp} test.ns

@@ -1,0 +1,10 @@
+#!/bin/sh -x
+
+# redirect all stdout/stderr to log file in /tmp so user can debug errors
+exec > /tmp/startup.log 2>&1
+
+# start infiniband interface
+sudo /share/probe/bin/probe-network --big --ib connected || exit 1
+
+echo "startup complete."
+exit 0

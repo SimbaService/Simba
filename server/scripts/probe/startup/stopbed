@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source ../config.sh
+
+/share/probe/bin/probe-makebed -e ${exp} -p ${proj} -r

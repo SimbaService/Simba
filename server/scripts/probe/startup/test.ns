@@ -1,0 +1,27 @@
+set ns [new Simulator]
+source tb_compat.tcl
+
+set maxnodes  48
+set lanstr ""
+
+
+for {set i 1} {$i <= $maxnodes} {incr i} {
+    
+    set h$i [$ns node]
+	#append lanstr "h$i "
+
+	# custom OS image
+	#tb-set-node-os h$i SimbaDefault
+    tb-set-node-failure-action h$i "nonfatal"
+
+	# you can start apps automatically on each node, and dump logs
+	# scripts/runme.node($i) need to created on kodiak control machine
+
+	# command
+	# tb-set-node-startcmd h$i "/proj/CloudStorage/scripts/runme.node($i)" >& /tmp/foo.log($i)"
+}
+
+#set lan0 [$ns make-lan "$lanstr" 100Mb 0ms]
+
+$ns rtproto Static
+$ns run

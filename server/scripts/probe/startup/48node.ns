@@ -1,0 +1,198 @@
+set ns [new Simulator]
+source tb_compat.tcl
+
+    set h0 [$ns node]
+    tb-set-node-os $h0 SimbaDefault
+    tb-set-node-failure-action $h0 "nonfatal"
+
+    set h1 [$ns node]
+    tb-set-node-os $h1 SimbaDefault
+    tb-set-node-failure-action $h1 "nonfatal"
+
+    set h2 [$ns node]
+    tb-set-node-os $h2 SimbaDefault
+    tb-set-node-failure-action $h2 "nonfatal"
+
+    set h3 [$ns node]
+    tb-set-node-os $h3 SimbaDefault
+    tb-set-node-failure-action $h3 "nonfatal"
+
+    set h4 [$ns node]
+    tb-set-node-os $h4 SimbaDefault
+    tb-set-node-failure-action $h4 "nonfatal"
+
+    set h5 [$ns node]
+    tb-set-node-os $h5 SimbaDefault
+    tb-set-node-failure-action $h5 "nonfatal"
+
+    set h6 [$ns node]
+    tb-set-node-os $h6 SimbaDefault
+    tb-set-node-failure-action $h6 "nonfatal"
+
+    set h7 [$ns node]
+    tb-set-node-os $h7 SimbaDefault
+    tb-set-node-failure-action $h7 "nonfatal"
+
+    set h8 [$ns node]
+    tb-set-node-os $h8 SimbaDefault
+    tb-set-node-failure-action $h8 "nonfatal"
+
+    set h9 [$ns node]
+    tb-set-node-os $h9 SimbaDefault
+    tb-set-node-failure-action $h9 "nonfatal"
+
+    set h10 [$ns node]
+    tb-set-node-os $h10 SimbaDefault
+    tb-set-node-failure-action $h10 "nonfatal"
+
+    set h11 [$ns node]
+    tb-set-node-os $h11 SimbaDefault
+    tb-set-node-failure-action $h11 "nonfatal"
+
+    set h12 [$ns node]
+    tb-set-node-os $h12 SimbaDefault
+    tb-set-node-failure-action $h12 "nonfatal"
+
+    set h13 [$ns node]
+    tb-set-node-os $h13 SimbaDefault
+    tb-set-node-failure-action $h13 "nonfatal"
+
+    set h14 [$ns node]
+    tb-set-node-os $h14 SimbaDefault
+    tb-set-node-failure-action $h14 "nonfatal"
+
+    set h15 [$ns node]
+    tb-set-node-os $h15 SimbaDefault
+    tb-set-node-failure-action $h15 "nonfatal"
+
+    set h16 [$ns node]
+    tb-set-node-os $h16 SimbaDefault
+    tb-set-node-failure-action $h16 "nonfatal"
+
+    set h17 [$ns node]
+    tb-set-node-os $h17 SimbaDefault
+    tb-set-node-failure-action $h17 "nonfatal"
+
+    set h18 [$ns node]
+    tb-set-node-os $h18 SimbaDefault
+    tb-set-node-failure-action $h18 "nonfatal"
+
+    set h19 [$ns node]
+    tb-set-node-os $h19 SimbaDefault
+    tb-set-node-failure-action $h19 "nonfatal"
+
+    set h20 [$ns node]
+    tb-set-node-os $h20 SimbaDefault
+    tb-set-node-failure-action $h20 "nonfatal"
+
+    set h21 [$ns node]
+    tb-set-node-os $h21 SimbaDefault
+    tb-set-node-failure-action $h21 "nonfatal"
+
+    set h22 [$ns node]
+    tb-set-node-os $h22 SimbaDefault
+    tb-set-node-failure-action $h22 "nonfatal"
+
+    set h23 [$ns node]
+    tb-set-node-os $h23 SimbaDefault
+    tb-set-node-failure-action $h23 "nonfatal"
+
+    set h24 [$ns node]
+    tb-set-node-os $h24 SimbaDefault
+    tb-set-node-failure-action $h24 "nonfatal"
+
+    set h25 [$ns node]
+    tb-set-node-os $h25 SimbaDefault
+    tb-set-node-failure-action $h25 "nonfatal"
+
+    set h26 [$ns node]
+    tb-set-node-os $h26 SimbaDefault
+    tb-set-node-failure-action $h26 "nonfatal"
+
+    set h27 [$ns node]
+    tb-set-node-os $h27 SimbaDefault
+    tb-set-node-failure-action $h27 "nonfatal"
+
+    set h28 [$ns node]
+    tb-set-node-os $h28 SimbaDefault
+    tb-set-node-failure-action $h28 "nonfatal"
+
+    set h29 [$ns node]
+    tb-set-node-os $h29 SimbaDefault
+    tb-set-node-failure-action $h29 "nonfatal"
+
+    set h30 [$ns node]
+    tb-set-node-os $h30 SimbaDefault
+    tb-set-node-failure-action $h30 "nonfatal"
+
+    set h31 [$ns node]
+    tb-set-node-os $h31 SimbaDefault
+    tb-set-node-failure-action $h31 "nonfatal"
+
+    set h32 [$ns node]
+    tb-set-node-os $h32 SimbaDefault
+    tb-set-node-failure-action $h32 "nonfatal"
+
+    set h33 [$ns node]
+    tb-set-node-os $h33 SimbaDefault
+    tb-set-node-failure-action $h33 "nonfatal"
+
+    set h34 [$ns node]
+    tb-set-node-os $h34 SimbaDefault
+    tb-set-node-failure-action $h34 "nonfatal"
+
+    set h35 [$ns node]
+    tb-set-node-os $h35 SimbaDefault
+    tb-set-node-failure-action $h35 "nonfatal"
+
+    set h36 [$ns node]
+    tb-set-node-os $h36 SimbaDefault
+    tb-set-node-failure-action $h36 "nonfatal"
+
+    set h37 [$ns node]
+    tb-set-node-os $h37 SimbaDefault
+    tb-set-node-failure-action $h37 "nonfatal"
+
+    set h38 [$ns node]
+    tb-set-node-os $h38 SimbaDefault
+    tb-set-node-failure-action $h38 "nonfatal"
+
+    set h39 [$ns node]
+    tb-set-node-os $h39 SimbaDefault
+    tb-set-node-failure-action $h39 "nonfatal"
+
+    set h40 [$ns node]
+    tb-set-node-os $h40 SimbaDefault
+    tb-set-node-failure-action $h40 "nonfatal"
+
+    set h41 [$ns node]
+    tb-set-node-os $h41 SimbaDefault
+    tb-set-node-failure-action $h41 "nonfatal"
+
+    set h42 [$ns node]
+    tb-set-node-os $h42 SimbaDefault
+    tb-set-node-failure-action $h42 "nonfatal"
+
+    set h43 [$ns node]
+    tb-set-node-os $h43 SimbaDefault
+    tb-set-node-failure-action $h43 "nonfatal"
+
+    set h44 [$ns node]
+    tb-set-node-os $h44 SimbaDefault
+    tb-set-node-failure-action $h44 "nonfatal"
+
+    set h45 [$ns node]
+    tb-set-node-os $h45 SimbaDefault
+    tb-set-node-failure-action $h45 "nonfatal"
+
+    set h46 [$ns node]
+    tb-set-node-os $h46 SimbaDefault
+    tb-set-node-failure-action $h46 "nonfatal"
+
+    set h47 [$ns node]
+    tb-set-node-os $h47 SimbaDefault
+    tb-set-node-failure-action $h47 "nonfatal"
+
+$ns rtproto Static
+$ns run
+
