@@ -58,6 +58,11 @@ Running Linux Test Client for Simba
 java -cp simbaserver-common-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.necla.simba.testclient.Client <workload file> <output folder> <prefix>  
 ```
 
+Deployment on PRObE
+-------------------
+Want to deploy Simba on PRObE? Find out more [here](scripts/probe/README.md)!
+
 Scripts for generating tables/workloads
 ---------------------------------------
 Can be found in ./scripts/  
+
