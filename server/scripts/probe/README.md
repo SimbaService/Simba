@@ -1,7 +1,7 @@
 PRObE scripts
 =============
 
-This directory contains scripts which are used to configure/deploy the Simba Server on PRObE nodes (http://nmc-probe.org/), specifically using the Kodiak cluster. These scripts configure Apache Cassandra, OpenStack Swift, and Simba Gateways and Stores. For deployment elsewhere, please adapt these scripts for your needs.
+This directory contains scripts which are used to configure/deploy the Simba Server on PRObE nodes (http://nmc-probe.org/), specifically using the Kodiak cluster. These scripts configure Apache Cassandra, OpenStack Swift, and Simba Gateways and Stores. It assumes Cassandra and Swift are pre-installed in your PRObE disk image. For deployment elsewhere, please adapt these scripts for your needs.
 
 Configuration steps
 -----
