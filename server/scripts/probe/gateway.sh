@@ -1,13 +1,15 @@
 #!/bin/bash
 
-source config.sh
+DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
+source $DIR/config.sh
 
 if [ x$1 == "xstart" ]
 then
 	cd /mnt/sda4
 	cp $HOME/simba/simbaserver-gateway-0.0.1-SNAPSHOT-jar-with-dependencies.jar .
 	cp $HOME/simba/*jks .
-	cp /proj/${proj}/scripts/gateway.properties .
+	cp ${script_dir}/gateway.properties .
 	if [ x$2 == "x-fg" ]
 	then
 		java -Xms256m -Xmx1g -jar simbaserver-gateway-0.0.1-SNAPSHOT-jar-with-dependencies.jar -p gateway.properties

@@ -10,7 +10,7 @@ exp='exp'
 #################################################
 
 script_dir = '/proj/'+proj+'/scripts/'
-base_name = '.'+proj+'.'+exp+'.kodiak.nx'
+base_name = '.'+exp.lower()+'.'+proj.lower()+'.kodiak.nx'
 data_disk = 'sdb'
 simbastore_port = 9000
 gateway_port = 9001

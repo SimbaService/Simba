@@ -4,7 +4,9 @@
 # Runs user-supplised command on all nodes
 #
 
-source config.sh
+DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
+source $DIR/config.sh
 
 num_nodes=75
 i=1

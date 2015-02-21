@@ -9,5 +9,5 @@ num_nodes=48
 
 ##########################
 
-script_dir="/proj/"+${proj}+"/scripts"
-log_dir="/proj/"+${proj}+"/logs"
+script_dir="/proj/${proj}/scripts"
+log_dir="/proj/${proj}/logs"

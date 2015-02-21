@@ -1,6 +1,8 @@
 #!/bin/bash
 
-source config.sh
+DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
+source $DIR/config.sh
 
 if [ x$1 == "xstart" ]
 then

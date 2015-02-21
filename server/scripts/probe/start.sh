@@ -1,6 +1,8 @@
 #!/bin/bash
 
-source config.sh
+DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
+source $DIR/config.sh
 
 HS=`hostname`
 exec > ${log_dir}/$HS-start.log 2>&1
