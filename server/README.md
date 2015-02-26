@@ -31,6 +31,27 @@ In `simbastore.properties`, set:
   * `swift.password`: Pass key for Swift account.  
   * `swift.proxy.url`: Swift proxy URL.  
 
+Cassandra Setup
+---------------
+Prepare your Cassandra deployment by creating the following keyspace and tables.  
+
+```  
+CREATE KEYSPACE simbastore WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};  
+CREATE TABLE simbastore.metadata (key text PRIMARY KEY, consistency text);  
+CREATE TABLE simbastore.subscriptions (key uuid PRIMARY KEY, subscriptions list<blob>);  
+```
+
+This assumes you have set `cassandra.keyspace=simbastore` inside `simbastore.properties`. Otherwise, replace the keyspace name to match the name you have chosen.  
+
+Swift Setup
+-----------
+Prepare your Swift deployment by creating the container with the name you have set for `swift.container` inside `simbastore.properties`.  
+
+Using the Swift command-line tool, the command is:  
+```  
+swift -A ${swift.proxy.url} -U ${swift.identity} -K ${swift.password} post ${swift.container}  
+```  
+
 Compilation
 -----------
 To compile, run:  
