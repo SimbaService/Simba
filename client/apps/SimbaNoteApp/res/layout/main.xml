@@ -68,23 +68,14 @@
             android:textSize="14sp"
             android:visibility="gone" />
 
-        <Button
-            android:id="@+id/update50"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Update 50"
-            android:textSize="14sp"
-            android:visibility="gone" />
          <Button
             android:id="@+id/update1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Update 1"
+            android:text="Update"
             android:textSize="14sp"
-            android:visibility="gone" />
-        
+            android:visibility="gone" />        
 
         <Button
             android:id="@+id/button4"

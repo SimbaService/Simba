@@ -15,7 +15,7 @@ You must set certain configuration options in the following files:
 
 In `Preferences.java`, set:  
   * `DEFAULT_HOST`: Default IP address to Simba Cloud.  
-  * `DEFAULT_PORT`: Default port number to Simba Cloud.  
+  * `DEFAULT_PORT`: Default port number to Simba Cloud.
 
 In `Main.java`, set:  
   * `TBL`: Name of Simba Table.  
@@ -30,9 +30,9 @@ Open a new Android project with SimbaClientLib.
 
 SimbaNoteApp Setup
 --------------------
-Open a new Android project with SimbaNoteApp.
+Open a new Android project with SimbaNoteApp and create a dependency to SimbaClientLib.
 
-Create a dependency to SimbaClientLib.
+Note that GUI for setting Simba Cloud Host Name may not work correctly.
 
 Starting SimbaContentService
 ----------------------
