@@ -69,9 +69,8 @@ public class Preferences {
 
 	// SCS
 	public static final String PREFS_NAME = "scs_preferences";
-	public static final String DEFAULT_HOST = "138.15.110.55"; // storwire
-	//public static final String DEFAULT_HOST = "138.15.166.60"; // Simba-test-vm
-	public static final int DEFAULT_PORT = 9001;
+	public static final String DEFAULT_HOST = "";
+	public static final int DEFAULT_PORT = 0;
 	public static ConnState globalReadSyncPref = ConnState.TG;
 	public static final double READ_DT_SERVER_RATIO = 0.8; // 80% of original DT is for server
 	

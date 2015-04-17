@@ -137,14 +137,6 @@ public class Main extends Activity {
 	private StatContainer syncTime = new StatContainer();
 	private StatContainer localReadTime = new StatContainer();
 
-	private String identifier;
-
-	enum ClientType {
-		WRITER, READER, CONFLICTOR
-	}
-
-	private ClientType myType = ClientType.WRITER;
-
 	public static String randomString(int len) {
 		StringBuilder sb = new StringBuilder(len);
 		for (int i = 0; i < len; i++)
@@ -155,33 +147,6 @@ public class Main extends Activity {
 	private void init() {
 		context = this.getApplicationContext();
 
-		identifier = null;
-		TelephonyManager tm = (TelephonyManager) context
-				.getSystemService(Context.TELEPHONY_SERVICE);
-		if (tm != null) {
-			identifier = tm.getDeviceId();
-			Log.d(TAG, "DEVICE_ID = " + identifier);
-		}
-
-		if (identifier == null || identifier.length() == 0) {
-			identifier = Secure.getString(context.getContentResolver(),
-					Secure.ANDROID_ID);
-			Log.d(TAG, "ANDROID_ID = " + identifier);
-		}
-
-
-		// used for setting client types with phone ids
-		if (identifier.equals("268435460715619591")) {
-			myType = ClientType.WRITER;
-			Log.d(TAG, "THIS DEVICE IS THE WRITER!");
-		} else if (identifier.equals("a9be645046f356ca")) {
-			myType = ClientType.READER;
-			Log.d(TAG, "THIS DEVICE IS THE READER!");
-		} else {
-			myType = ClientType.CONFLICTOR;
-		}
-
-		Log.d(TAG, "imei=" + identifier);
 		// Log.d("CONTEXTCONTEXTCONTEXT", "context="+context);
 		notify_callback = new ISCSClientApp() {
 			public void newData(String table, final int rows,
@@ -231,21 +196,10 @@ public class Main extends Activity {
 
 					// case 2) subscribe to a table with read sync setting
 					// subscribeTable (tablename, period, dt, ...)
-
-					if (myType == ClientType.WRITER) {
-						 adapter.registerPeriodicWriteSync(TBL, 1000, 0,
-						 ConnState.WIFI);
-					} else if (myType == ClientType.CONFLICTOR) {
-
-						adapter.registerPeriodicWriteSync(TBL, 1000, 0,
-								ConnState.WIFI);
-						adapter.subscribePeriodicReadSync(TBL, 1000, 0,
-								ConnState.WIFI);
-
-					} else if (myType == ClientType.READER) {
-						 adapter.subscribePeriodicReadSync(TBL, 1000, 0,
-						 ConnState.WIFI);
-					}
+					adapter.registerPeriodicWriteSync(TBL, 1000, 0,
+							ConnState.TG);
+					adapter.subscribePeriodicReadSync(TBL, 1000, 0,
+							ConnState.TG);
 
 					// CAUSAL OR EVENTUAL
 					// case 1) create table from app
@@ -357,14 +311,6 @@ public class Main extends Activity {
 		});
 
 		// update data (update local row)
-		v = findViewById(R.id.update50);
-		btn = (Button) v;
-		btn.setOnClickListener(new OnClickListener() {
-			public void onClick(View arg0) {
-				localUpdateTime.reset();
-				new BatchUpdateTask().execute(50);
-			}
-		});
 		v = findViewById(R.id.update1);
 		btn = (Button) v;
 		btn.setOnClickListener(new OnClickListener() {
@@ -449,7 +395,6 @@ public class Main extends Activity {
 		findViewById(R.id.textView3).setVisibility(View.VISIBLE);
 		findViewById(R.id.button1).setVisibility(View.VISIBLE);
 		findViewById(R.id.button2).setVisibility(View.VISIBLE);
-		findViewById(R.id.update50).setVisibility(View.VISIBLE);
 		findViewById(R.id.update1).setVisibility(View.VISIBLE);
 		findViewById(R.id.button4).setVisibility(View.VISIBLE);
 		findViewById(R.id.button5).setVisibility(View.VISIBLE);
@@ -470,7 +415,6 @@ public class Main extends Activity {
 		findViewById(R.id.textView3).setVisibility(View.GONE);
 		findViewById(R.id.button1).setVisibility(View.GONE);
 		findViewById(R.id.button2).setVisibility(View.GONE);
-		findViewById(R.id.update50).setVisibility(View.GONE);
 		findViewById(R.id.update1).setVisibility(View.GONE);
 		findViewById(R.id.button4).setVisibility(View.GONE);
 		findViewById(R.id.button5).setVisibility(View.GONE);
@@ -583,7 +527,7 @@ public class Main extends Activity {
 				cv = new ContentValues();
 				long now = System.currentTimeMillis();
 				cv.put("timestamp", "" + now);
-				cv.put("comment", myType == ClientType.WRITER ? "good" : "bad");
+				cv.put("comment", "good");
 				// insert object
 				cv.put("obj_1", "");
 				String[] objectOrdering = new String[] { "obj_1" };
@@ -720,7 +664,7 @@ public class Main extends Activity {
 			for (; i < arg0[0]; i++) {
 				ContentValues cv = new ContentValues();
 				cv.put("obj_1", "");
-				cv.put("comment", myType == ClientType.WRITER ? "good" : "bad");
+				cv.put("comment", "good");
 				final long before = System.currentTimeMillis();
 				Log.d(TAG, "update ts=" + before);
 
