@@ -47,7 +47,7 @@ An [example app](client/apps/SimbaNoteApp) is included to demonstrate the ease-o
 
 More Information
 ----------------
-Please see our papers on Simba ([FAST 2015](https://www.usenix.org/conference/fast15/technical-sessions/presentation/go), EuroSys 2015) for more information.  
+Please see our papers on Simba ([FAST 2015](https://www.usenix.org/conference/fast15/technical-sessions/presentation/go), [EuroSys 2015](http://dl.acm.org/citation.cfm?id=2741974)) for more information.  
 
 Questions?
 ----------

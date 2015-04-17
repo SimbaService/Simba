@@ -78,7 +78,8 @@ public class Client {
 					/*
 					 * writer format: W <table name> <# rows to write> <starting
 					 * row #> <starting version #> <object size> <delay b/t
-					 * writes (ms)> <# writer clients>
+					 * writes (ms)> <reader start delay (minutes)> <writer start
+					 * delay (minutes)> <# writer clients>
 					 */
 
 					int startRowMultiplier = 0;
@@ -102,7 +103,7 @@ public class Client {
 					/*
 					 * reader format: R <table name> <subscription period (ms)>
 					 * <delay tolerance interval (ms)> <start version> <num
-					 * rows> <# reader clients>
+					 * rows> <reader start delay (minutes)> <# reader clients>
 					 */
 					for (int i = 0; i < Integer.parseInt(l[7]); i++) {
 						ReaderThread r = new ReaderThread(l,
